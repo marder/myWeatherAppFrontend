@@ -8,7 +8,7 @@
     <!-- Flex Container -->
     <div class="flex justify-center items-center">
       <div class="p-5">
-        <div class="text-gray-600 font-Rubik text-3xl"><i class="fa-solid fa-sun text-yellowMain"></i> myWeatherApp</div>
+        <div class="text-gray-600 font-Rubik text-1xl"><i class="fa-solid fa-sun text-yellowMain"></i> myWeatherApp</div>
       </div>
       <div class="text-black block p-5">
         <p class="py-2">Projekt i wykonanie Marcin Derucki</p>
