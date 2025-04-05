@@ -13,13 +13,13 @@ const isActiveLink = (routePath) => {
     <div class="hidden bg-greenMain md:flex justify-center divide-x divide-gray-600 space-x-6 p-2">
       <div class="text-black m-1">
         <i class="pi pi-map-marker"></i>
-        ul. Legionów Polskich 1/11, 62-700 Turek
+        xxx
       </div>
       <div class="text-black m-1 pl-3">
-        <i class="pi pi-phone"></i> +48 603-386-856
+        <i class="pi pi-phone"></i> xxx
       </div>
       <div class="text-black m-1 pl-3">
-        <i class="pi pi-calendar-clock"></i> od 9:00 do 11:00
+        <i class="pi pi-calendar-clock"></i> xxx
       </div>
     </div>
     <nav class="relative container mx-auto px-10 py-5">

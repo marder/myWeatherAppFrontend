@@ -12,7 +12,7 @@
       <h2
         class="font-Rubik text-5xl font-bold text-center text-black md:text-4xl md:max-w-xl md:text-left"
       >
-        Poznaj szczegóły naszej oferty
+        O projekcie
       </h2>
       <!-- Button -->
       <div>
