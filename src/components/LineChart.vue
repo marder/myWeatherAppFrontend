@@ -11,36 +11,40 @@ import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend)
 
 import dayjs from 'dayjs';
-import { ref, onMounted } from 'vue';
+import { ref, isProxy, toRaw } from 'vue';
 import axios from 'axios';
 
 const data = ref([]);
-const temp = ref([]);
-const labels = ref([]);
+// const temp = ref([]);
+// const labels = ref([]);
 
 export default {
     name: 'LineChart',
     components: { Line },
+    data: () => {
+        return {
+            loaded: false,
+            chartData: null,
+            labels: [],
+            temperature: []
+        }
+    },
     async mounted() {
+        this.loaded = false;
+
         try {
             const response = await axios.get('https://marder.bieda.it/cms/dhtData?api_key=1qazxsw23');
             data.value = response.data.slice(-24);
 
-            const test = new Object(data.value);
+            let cD = toRaw(data.value);
 
-            test.forEach((i) =>
-                console.log(i["readingDate"])
-            );
+            this.labels = cD.map((item) => item.readingDate);
+            this.temperature = cD.map((item) => item.temperature);
 
-            let lab = []
+            console.log(this.labels);
+            console.log(this.temperature);
 
-            test.forEach((i) =>
-                lab.push(i["readingDate"])
-            );
-
-            labels.value.push(lab)
-
-            console.log(labels.value)
+            this.loaded = true;
 
         } catch (error) {
             console.error('Error fetching data', error);
@@ -49,8 +53,8 @@ export default {
     data() {
         return {
             chartData: {
-                labels: labels,
-                datasets: [{ data: data }]
+                labels: this.labels,
+                datasets: [{ data: this.temperature }]
             },
             chartOptions: {
                 responsive: true
