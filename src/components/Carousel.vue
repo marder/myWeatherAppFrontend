@@ -31,14 +31,12 @@ const slides = [
       <vueper-slide v-for="(slide, i) in slides" :key="i" :image="slide.image" :title="slide.title"
         :content="slide.content" />
       <template #pause>
-        <div class="text-black m-1 text-3xl">
+        <div class="text-yellowMain m-1 text-3xl">
           <i class="pi pi-pause-circle"></i>
         </div>
       </template>
     </vueper-slides>
   </section>
 </template>
-
-
 
 <style></style>

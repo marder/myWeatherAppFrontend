@@ -24,8 +24,8 @@ const isActiveLink = (routePath) => {
             :class="[isActiveLink('/') ? 'text-black' : 'text-gray-600', 'font-Rubik', 'hover:text-black', 'text-transform: uppercase']">
             Dane z 24h
           </RouterLink>
-          <RouterLink to="/offer"
-            :class="[isActiveLink('/offer') ? 'text-black' : 'text-gray-600', 'font-Rubik', 'hover:text-black', 'text-transform: uppercase']">
+          <RouterLink to="/data"
+            :class="[isActiveLink('/data') ? 'text-black' : 'text-gray-600', 'font-Rubik', 'hover:text-black', 'text-transform: uppercase']">
             Odczyty
           </RouterLink>
           <RouterLink to="/about"

@@ -1,8 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "@/views/HomeView.vue";
 import AboutView from "@/views/AboutView.vue";
-import OfferView from "@/views/OfferView.vue";
-import ContactView from "@/views/ContactView.vue";
+import DataView from "@/views/DataView.vue";
 import NotFoundView from "@/views/NotFoundView.vue";
 
 
@@ -20,14 +19,9 @@ const router = createRouter({
             component: AboutView
         },
         {
-            path: '/offer',
-            name: 'offer',
-            component: OfferView
-        },
-        {
-            path: '/contact',
-            name: 'contact',
-            component: ContactView
+            path: '/data',
+            name: 'data',
+            component: DataView
         },
         {
             path: '/:catchAll(.*)',
