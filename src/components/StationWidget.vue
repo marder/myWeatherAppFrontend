@@ -10,7 +10,6 @@ onMounted(async () => {
   try {
     const response = await axios.get('https://danepubliczne.imgw.pl/api/data/synop/station/kolo');
     data.value = response.data;
-    console.log(data.value.cisnienie)
   } catch (error) {
     console.error('Error fetching data', error);
   }
