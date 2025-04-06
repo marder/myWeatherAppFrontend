@@ -4,7 +4,6 @@ import CTA from "@/components/CTA.vue";
 import Carousel from "@/components/Carousel.vue";
 import Header from "@/components/Header.vue";
 
-import VueCharts from '@/components/VueCharts.vue';
 </script>
 
 <template>
