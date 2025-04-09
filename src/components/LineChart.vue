@@ -1,65 +1,55 @@
 <template>
-    <div class="container mx-auto py-10">
-        <Line id="my-chart-id" :options="chartOptions" :data="chartData" />
+    <div class="container mx-auto">
+        <Line v-if="loaded" :data="data.chartData" />
     </div>
 </template>
 
-<script>
+<script setup>
 import { Line } from 'vue-chartjs'
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js'
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend)
 
 import dayjs from 'dayjs';
-import { ref, isProxy, toRaw } from 'vue';
+import { reactive, ref, isProxy, toRaw } from 'vue';
 import axios from 'axios';
 
-const data = ref([]);
-// const temp = ref([]);
-// const labels = ref([]);
+const labels = ref([]);
+const temperature = ref([]);
 
-export default {
-    name: 'LineChart',
-    components: { Line },
-    data: () => {
-        return {
-            loaded: false,
-            chartData: null,
-            labels: [],
-            temperature: []
-        }
-    },
-    async mounted() {
-        this.loaded = false;
-
-        try {
-            const response = await axios.get('https://marder.bieda.it/cms/dhtData?api_key=1qazxsw23');
-            data.value = response.data.slice(-24);
-
-            let cD = toRaw(data.value);
-
-            this.labels = cD.map((item) => item.readingDate);
-            this.temperature = cD.map((item) => item.temperature);
-
-            console.log(this.labels);
-            console.log(this.temperature);
-
-            this.loaded = true;
-
-        } catch (error) {
-            console.error('Error fetching data', error);
-        }
-    },
-    data() {
-        return {
-            chartData: {
-                labels: this.labels,
-                datasets: [{ data: this.temperature }]
-            },
-            chartOptions: {
-                responsive: true
-            }
-        }
+async function getLabels() {
+    try {
+        const data24 = await axios.get('https://marder.bieda.it/cms/24?api_key=1qazxsw23');
+        labels.value = data24.data;
+        return (labels.value.labels)
+    } catch (error) {
+        console.error('Error fetching data', error);
     }
 }
+
+async function getTemperature() {
+    try {
+        const data24 = await axios.get('https://marder.bieda.it/cms/24?api_key=1qazxsw23');
+        temperature.value = data24.data;
+        //console.log(temperature.value)
+        return (temperature.value.temperature)
+    } catch (error) {
+        console.error('Error fetching data', error);
+    }
+}
+
+const data = {
+    loaded: false,
+    chartData: {
+        labels: await getLabels(),
+        datasets: [
+            {
+                label: "chuj",
+                data: await getTemperature()
+            }
+        ]
+    }
+}
+
+const loaded = true;
 </script>
