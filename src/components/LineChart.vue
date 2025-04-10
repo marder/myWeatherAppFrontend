@@ -19,7 +19,7 @@ const temperature = ref([]);
 
 async function getLabels() {
     try {
-        const data24 = await axios.get('https://marder.bieda.it/cms/24?api_key=1qazxsw23');
+        const data24 = await axios.get('https://marder.bieda.it/api/24?api_key=1qazxsw23');
         labels.value = data24.data;
         return (labels.value.labels)
     } catch (error) {
@@ -29,7 +29,7 @@ async function getLabels() {
 
 async function getTemperature() {
     try {
-        const data24 = await axios.get('https://marder.bieda.it/cms/24?api_key=1qazxsw23');
+        const data24 = await axios.get('https://marder.bieda.it/api/24?api_key=1qazxsw23');
         temperature.value = data24.data;
         //console.log(temperature.value)
         return (temperature.value.temperature)
@@ -44,8 +44,13 @@ const data = {
         labels: await getLabels(),
         datasets: [
             {
-                label: "chuj",
-                data: await getTemperature()
+                label: "temperatura",
+                data: await getTemperature(),
+                borderColor: '#b30000',
+                backgroundColor: '#cd0000',
+                pointStyle: 'circle',
+                pointRadius: 5,
+                pointHoverRadius: 10
             }
         ]
     }

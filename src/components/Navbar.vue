@@ -22,7 +22,7 @@ const isActiveLink = (routePath) => {
         <div class="hidden md:flex space-x-12">
           <RouterLink to="/"
             :class="[isActiveLink('/') ? 'text-black' : 'text-gray-600', 'font-Rubik', 'hover:text-black', 'text-transform: uppercase']">
-            Dane z 24h
+            Dane z 12h
           </RouterLink>
           <RouterLink to="/data"
             :class="[isActiveLink('/data') ? 'text-black' : 'text-gray-600', 'font-Rubik', 'hover:text-black', 'text-transform: uppercase']">

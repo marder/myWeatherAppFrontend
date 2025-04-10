@@ -8,7 +8,7 @@ let lastData = ref([]);
 
 onMounted(async () => {
   try {
-    const response = await axios.get('https://marder.bieda.it/cms/dhtData?api_key=1qazxsw23');
+    const response = await axios.get('https://marder.bieda.it/api/data?api_key=1qazxsw23');
     data.value = response.data.slice(-24);
     lastData.value = data.value.reverse();
   } catch (error) {
