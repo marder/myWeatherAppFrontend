@@ -11,11 +11,11 @@ import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend)
 
 import dayjs from 'dayjs';
-import { reactive, ref, isProxy, toRaw } from 'vue';
+import { ref } from 'vue';
 import axios from 'axios';
 
 const labels = ref([]);
-const temperature = ref([]);
+const humidity = ref([]);
 
 async function getLabels() {
     try {
@@ -27,12 +27,12 @@ async function getLabels() {
     }
 }
 
-async function getTemperature() {
+async function getHumidity() {
     try {
         const data24 = await axios.get('https://marder.bieda.it/api/24?api_key=1qazxsw23');
-        temperature.value = data24.data;
+        humidity.value = data24.data;
         //console.log(temperature.value)
-        return (temperature.value.temperature)
+        return (humidity.value.humidity)
     } catch (error) {
         console.error('Error fetching data', error);
     }
@@ -44,13 +44,16 @@ const data = {
         labels: await getLabels(),
         datasets: [
             {
-                label: "temperatura",
-                data: await getTemperature(),
-                borderColor: '#b30000',
-                backgroundColor: '#cd0000',
+                label: "wilgotność",
+                data: await getHumidity(),
+                borderColor: '#1e90ff',
+                backgroundColor: '#87cefa',
+                borderWidth: 2,
                 pointStyle: 'circle',
                 pointRadius: 5,
-                pointHoverRadius: 10
+                pointHoverRadius: 10,
+                type: 'line',
+                order: 1
             }
         ]
     }
