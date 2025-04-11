@@ -15,7 +15,8 @@ const isActiveLink = (routePath) => {
       <div class="flex items-center justify-between">
         <!-- Logo -->
         <RouterLink class="md:pl-28" to="/">
-          <div class="text-gray-600 font-Rubik text-3xl"><i class="fa-solid fa-sun text-yellowMain"></i> myWeatherApp</div>
+          <div class="text-gray-600 font-Rubik text-3xl"><i class="fa-solid fa-sun text-yellowMain"></i> myWeatherApp
+          </div>
         </RouterLink>
         <!-- Logo end -->
         <!-- Menu items -->
@@ -44,10 +45,9 @@ const isActiveLink = (routePath) => {
       <div class="md:hidden">
         <div id="menu"
           class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
-          <a href="/" class="hover:text-orange-500">Główna</a>
-          <a href="/offer" class="hover:text-orange-500">Oferta</a>
-          <a href="/about" class="hover:text-orange-500">O nas</a>
-          <a href="/contact" class="hover:text-orange-500">Kontakt</a>
+          <a href="/" class="hover:text-green-500">Dane z 12h</a>
+          <a href="/data" class="hover:text-green-500">Odczyty</a>
+          <a href="/about" class="hover:text-green-500">O projekcie</a>
         </div>
       </div>
     </nav>
