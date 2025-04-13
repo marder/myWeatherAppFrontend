@@ -1,6 +1,14 @@
 <template>
-    <div class="container mx-auto">
-        <Line v-if="loaded" :data="data.chartData" />
+    <div class="flex flex-col">
+        <div class="overflow-x-auto">
+            <div class="inline-block min-w-full align-middle">
+                <div class="overflow-hidden">
+                    <div class="container mx-auto">
+                        <Line v-if="loaded" :data="data.chartData" />
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
