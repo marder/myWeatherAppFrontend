@@ -22,28 +22,29 @@ import photo from "@/assets/img/2.jpg";
                 </h1>
                 <p class="text-center text-gray-800 md:text-left">
                     Projekt myWeatherApp to wypadkowa kilku innych, pomniejszych projektów, które zostały zrealizowane
-                    przez mnie podczas nauki podstaw programowania. Pod koniec 2021 roku, zakupiłem pierwszą płytkę
+                    przez mnie podczas nauki podstaw programowania. Pod koniec 2021 roku zakupiłem pierwszą płytkę
                     Arduino wraz z podstawowymi czujnikami środowiskowymi. Po opanowaniu podstaw pomyślałem, że fajnie
                     by było publikować te dane gdzieś online. Do tego potrzebne były mikrokontrolery obsługujące wi-fi.
                 </p>
                 <p class="text-center text-gray-800 md:text-left">
                     Jednak po ogarnięciu kilku tutoriali z przesyłania danych do gotowych aplikacji, stwierdziłem, że
-                    fajnie by było samemu napisać taką apkę. Zacząłem się więc uczyć się JavaScript. I tak po jakimś
+                    stworzenie własnej apki to niezłe wyzwanie. Zacząłem więc od nauki JavaScript. I tak po jakimś
                     czasie powstał mój pierwszy backendowy serwer z interfejsem REST API do gromadzenia i publikowania
-                    danych przesyłanych przez klienta, czyli urządzenie z sensorami środowiskowymi.
+                    danych przesyłanych przez mojego klienta, czyli urządzenie z sensorami środowiskowymi.
                 </p>
                 <p class="text-center text-gray-800 md:text-left">
                     Teraz wystarczyło tylko przygotować „jakąś-w-miarę-czytelną-stronkę-www” do publikowania danych z
-                    serwera. W tym celu również skorzystałem z technologii opartej na JavaScript. Najbardziej rozsądną
-                    (czyt. najprostszą) opcją okazało się wykorzystanie 3 wersji VueJS.
+                    serwera. W tym celu również korzystam z technologii opartej na JavaScript. Najbardziej rozsądną
+                    (czyt. najprostszą do ogarnięcia) opcją okazało się wykorzystanie frameworka VueJS 3. Aby ogarnąć
+                    style używam z frameworka TaiwindCSS, a do generowania wykresów korzystam z ChartJS.
                 </p>
                 <p class="text-center text-gray-800 md:text-left">
                     To wszystko trzeba jeszcze gdzieś hostować. Podczas intensywnych poszukiwań najlepszego do moich
                     amatorskich projektów hostingu trafiłem na mikr.us oferujący tanie i dobre serwery VPS dla
-                    pasjonatów. Wystarczyło tylko ogarnąć podstawy Linuxa, ngnix i kilku innych technologii…
+                    pasjonatów. Wystarczyło tylko ogarnąć podstawy Linuxa, Ngnix i kilku innych technologii…
                 </p>
                 <p class="text-center text-gray-800 md:text-left">
-                    I voilà… Po 4 latach, w 2025 roku prezentuję Wam pierwszą wersję mojego apki. Trochę czasu minęło,
+                    I voilà… Po 4 latach, w 2025 roku, prezentuję Wam pierwszą wersję mojej apki. Trochę czasu minęło,
                     ale co się nauczyłem, to moje.
                 </p>
 
