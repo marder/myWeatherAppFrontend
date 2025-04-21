@@ -24,23 +24,26 @@ import photo from "@/assets/img/2.jpg";
                     Projekt myWeatherApp to wypadkowa kilku innych, pomniejszych projektów, które zostały zrealizowane
                     przez mnie podczas nauki podstaw programowania. Pod koniec 2021 roku zakupiłem pierwszą płytkę
                     Arduino wraz z podstawowymi czujnikami środowiskowymi. Po opanowaniu podstaw pomyślałem, że fajnie
-                    by było publikować te dane gdzieś online. Do tego potrzebne były mikrokontrolery obsługujące wi-fi.
+                    by było publikować te dane gdzieś online. Jednak do tego potrzebne były mikrokontrolery obsługujące
+                    wi-fi.
                 </p>
                 <p class="text-center text-gray-800 md:text-left">
-                    Jednak po ogarnięciu kilku tutoriali z przesyłania danych do gotowych aplikacji, stwierdziłem, że
-                    stworzenie własnej apki to niezłe wyzwanie. Zacząłem więc od nauki JavaScript. I tak po jakimś
-                    czasie powstał mój pierwszy backendowy serwer z interfejsem REST API do gromadzenia i publikowania
-                    danych przesyłanych przez mojego klienta, czyli urządzenie z sensorami środowiskowymi.
+                    Po ogarnięciu kilku tutoriali z przesyłania danych do gotowych aplikacji za pomocą ich API,
+                    stwierdziłem, że
+                    prawdziwym wyzwaniem będzie stworzenie własnej apki. Aby ją napisać, zacząłem uczyć się JavaScript,
+                    a dokładniej Node.js. I tak, po jakimś czasie, powstał mój pierwszy backendowy serwer z interfejsem
+                    REST API do gromadzenia i publikowania danych przesyłanych przez mojego klienta, czyli urządzenie z
+                    sensorami środowiskowymi.
                 </p>
                 <p class="text-center text-gray-800 md:text-left">
                     Teraz wystarczyło tylko przygotować „jakąś-w-miarę-czytelną-stronkę-www” do publikowania danych z
                     serwera. W tym celu również korzystam z technologii opartej na JavaScript. Najbardziej rozsądną
-                    (czyt. najprostszą do ogarnięcia) opcją okazało się wykorzystanie frameworka VueJS 3. Aby ogarnąć
-                    style używam z frameworka TaiwindCSS, a do generowania wykresów korzystam z ChartJS.
+                    (czyt. najprostszą do ogarnięcia) opcją okazało się wykorzystanie 3 wersji frameworka VueJS. Aby
+                    ogarnąć style używam z frameworka TaiwindCSS, a do generowania wykresów korzystam z ChartJS.
                 </p>
                 <p class="text-center text-gray-800 md:text-left">
                     To wszystko trzeba jeszcze gdzieś hostować. Podczas intensywnych poszukiwań najlepszego do moich
-                    amatorskich projektów hostingu trafiłem na mikr.us oferujący tanie i dobre serwery VPS dla
+                    amatorskich projektów hostingu trafiłem na Mikr.us oferujący tanie i dobre serwery VPS dla
                     pasjonatów. Wystarczyło tylko ogarnąć podstawy Linuxa, Ngnix i kilku innych technologii…
                 </p>
                 <p class="text-center text-gray-800 md:text-left">
@@ -64,8 +67,7 @@ import photo from "@/assets/img/2.jpg";
                     stylów oraz ChartJS do wykresów.</p>
 
                 <p class="text-center text-gray-800 md:text-left"><strong>Hosting:</strong> Virtual Private Server w
-                    Mikr.us, Ubuntu oraz
-                    nginx.</p>
+                    Mikr.us, Ubuntu oraz Nginx.</p>
 
                 <p class="text-center py-10 text-gray-800 md:text-left">
                     <strong>Marcin Derucki</strong>

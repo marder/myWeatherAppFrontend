@@ -19,7 +19,7 @@ const humidity = ref([]);
 
 async function getLabels() {
     try {
-        const data24 = await axios.get('https://marder.bieda.it/api/24?api_key=1qazxsw23');
+        const data24 = await axios.get('https://marder.bieda.it/api/24');
         labels.value = data24.data;
         return (labels.value.labels)
     } catch (error) {
@@ -29,7 +29,7 @@ async function getLabels() {
 
 async function getHumidity() {
     try {
-        const data24 = await axios.get('https://marder.bieda.it/api/24?api_key=1qazxsw23');
+        const data24 = await axios.get('https://marder.bieda.it/api/24');
         humidity.value = data24.data;
         //console.log(temperature.value)
         return (humidity.value.humidity)
