@@ -1,4 +1,5 @@
 <script setup>
+import dayjs from 'dayjs';
 import { reactive, onMounted, onBeforeMount, ref, computed, watch } from "vue";
 import { RouterLink, useRoute, useRouter } from "vue-router";
 import axios from "axios";
@@ -57,7 +58,7 @@ watch(
       console.log(state.totalPages);
 
     } catch (error) {
-      console.error("Error fetching real estate", error);
+      console.error("Error fetching data...", error);
     } finally {
       state.isLoading = false;
     }
@@ -86,6 +87,72 @@ const goToPage = (numPage) => {
 </script>
 
 <template>
+  <section class="bg-yellowMain md:flex justify-center divide-x divide-gray-600 space-x-6 px-8 py-8">
+    <div class="container sm:px-12">
+      <div class="md:flex md:items-center mb-6">
+        <div class="md:w-1/3">
+          <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+            Current page
+          </label>
+        </div>
+        <div class="md:w-2/3">
+          <input v-model="currentPage"
+            class="bg-gray-200 appearance-none border-2 border-gray-500 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+            type="text" value="1">
+        </div>
+      </div>
+      <div class="md:flex md:items-center mb-6">
+        <div class="md:w-1/3">
+          <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+            Per page
+          </label>
+        </div>
+        <div class="md:w-2/3">
+          <input v-model="perPage"
+            class="bg-gray-200 appearance-none border-2 border-gray-500 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+            type="text" value="10">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--
+  <section class="bg-yellowMain md:flex justify-center divide-x divide-gray-600 space-x-6 px-8 py-8">
+    <div class="container sm:px-12">
+      <h1 class="max-w-md text-2xl font-bold text-center font-Rubik md:text-2xl md:text-left sm:text-left sm:text-1xl">
+        Dane z 12h
+      </h1>
+      <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+            Username
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="username" type="text" placeholder="Username">
+        </div>
+        <div class="mb-6">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+            Password
+          </label>
+          <input
+            class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            id="password" type="password" placeholder="******************">
+          <p class="text-red-500 text-xs italic">Please choose a password.</p>
+        </div>
+        <div class="flex items-center justify-between">
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="button">
+            Sign In
+          </button>
+          <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
+            Forgot Password?
+          </a>
+        </div>
+      </form>
+    </div>
+  </section>
+  -->
   <!--
   <div class="">
     <div class="text-center text-lg-start bg-light">
@@ -140,7 +207,41 @@ const goToPage = (numPage) => {
         </form>
       </div>
     </div>
+-->
 
+
+  <section id="table" class="container mx-auto py-10">
+    <div class="flex flex-col">
+      <div class="overflow-x-auto shadow-md sm:rounded-lg">
+        <div class="inline-block min-w-full align-middle">
+          <div class="overflow-hidden">
+            <table class="min-w-full divide-y divide-gray-200 table-fixed dark:divide-gray-700">
+              <thead class="bg-gray-200 border-b">
+                <tr>
+                  <th scope="col" class="w-1/3 text-sm font-medium text-gray-900 px-4 py-2 text-left">Data</th>
+                  <th scope="col" class="w-1/3 text-sm font-medium text-gray-900 px-4 py-2 text-left">Temperatura</th>
+                  <th scope="col" class="w-1/3 text-sm font-medium text-gray-900 px-4 py-2 text-left">Wilgotność</th>
+                  <th scope="col" class="w-1/3 text-sm font-medium text-gray-900 px-4 py-2 text-left">Ciśnienie</th>
+                  <th scope="col" class="w-1/3 text-sm font-medium text-gray-900 px-4 py-2 text-left">Opis</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="even:bg-gray-100 odd:bg-white border-b" v-for="d in state.data.results" :key="d._id">
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{
+                    dayjs(d.readingDate).format('YYYY-MM-DD, HH:mm:ss') }}</td>
+                  <td class="text-sm text-gray-900 font-light px-4 py-1 whitespace-nowrap">{{ d.temperature }} °C</td>
+                  <td class="text-sm text-gray-900 font-light px-4 py-1 whitespace-nowrap">{{ d.humidity }}%</td>
+                  <td class="text-sm text-gray-900 font-light px-4 py-1 whitespace-nowrap">{{ d.pressure }} hPa</td>
+                  <td class="text-sm text-gray-900 font-light px-4 py-1 whitespace-nowrap">{{ d.description }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--
     <h1 class="text-center m-4 display-6">Wykaz nieruchomości Gminy Dobra (strona: {{ currentPage }} z
       {{ state.totalPages }})</h1>
     <table class="table table-striped">
