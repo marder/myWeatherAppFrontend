@@ -1,7 +1,4 @@
 <script setup>
-import TempChart from "@/components/TempChart.vue";
-import HumiChart from "@/components/HumiChart.vue";
-import PressChart from "@/components/PressChart.vue";
 import DataTable from "@/components/DataTable.vue";
 </script>
 
@@ -14,16 +11,7 @@ import DataTable from "@/components/DataTable.vue";
             </h1>
         </div>
     </section>
-    <section id="hero" class="py-10">
-        <Suspense>
-            <TempChart />
-        </Suspense>
-        <Suspense>
-            <HumiChart />
-        </Suspense>
-        <Suspense>
-            <PressChart />
-        </Suspense>
+    <section>
         <DataTable />
     </section>
 </template>

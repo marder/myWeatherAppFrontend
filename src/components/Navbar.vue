@@ -29,6 +29,10 @@ const isActiveLink = (routePath) => {
             :class="[isActiveLink('/data') ? 'text-black' : 'text-gray-600', 'font-Rubik', 'hover:text-black', 'text-transform: uppercase']">
             Odczyty
           </RouterLink>
+          <RouterLink to="/charts"
+            :class="[isActiveLink('/charts') ? 'text-black' : 'text-gray-600', 'font-Rubik', 'hover:text-black', 'text-transform: uppercase']">
+            Wykresy
+          </RouterLink>
           <RouterLink to="/about"
             :class="[isActiveLink('/about') ? 'text-black' : 'text-gray-600', 'font-Rubik', 'hover:text-black', 'text-transform: uppercase']">
             O projekcie
