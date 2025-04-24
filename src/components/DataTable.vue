@@ -141,7 +141,8 @@ const goToPage = (numPage) => {
   </section>
 
   <section id="table" class="container mx-auto py-10">
-    <h1 class="text-2xl font-bold text-center font-Rubik py-5">Tabela pomiarów (strona: {{ currentPage }} z
+    <h1 class="text-2xl font-bold text-center font-Rubik py-1">Tabela pomiarów</h1>
+    <h1 class="text-2xl font-bold text-center font-Rubik py-1 pb-5">(strona: {{ currentPage }} z
       {{ state.totalPages }})</h1>
     <div class="flex flex-col">
       <div class="overflow-x-auto shadow-md sm:rounded-lg">

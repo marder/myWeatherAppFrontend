@@ -51,6 +51,7 @@ const isActiveLink = (routePath) => {
           class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
           <a href="/" class="hover:text-green-500">Dane z 12h</a>
           <a href="/data" class="hover:text-green-500">Odczyty</a>
+          <a href="/charts" class="hover:text-green-500">Wykresy</a>
           <a href="/about" class="hover:text-green-500">O projekcie</a>
         </div>
       </div>
