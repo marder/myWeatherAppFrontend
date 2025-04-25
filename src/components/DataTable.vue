@@ -79,10 +79,7 @@ const goToPage = (numPage) => {
 </script>
 
 <template>
-
-
   <section class="bg-yellowMain md:flex justify-center divide-x divide-gray-600 space-x-6 px-8 py-5">
-
     <div class="w-full max-w-lg flex flex-wrap -mx-3 mb-6">
       <!--
       <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
@@ -137,7 +134,6 @@ const goToPage = (numPage) => {
         </div>
       </div>
     </div>
-
   </section>
 
   <section id="table" class="container mx-auto py-10">
