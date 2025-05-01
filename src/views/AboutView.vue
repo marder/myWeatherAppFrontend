@@ -55,13 +55,13 @@ import photo from "@/assets/img/2.jpg";
                 </p>
                 <p class="text-center text-gray-800 md:text-left">
                     <strong>🧠 Ale gdzie to wszystko wrzucić?</strong>
-                    Tu wchodzi na scenę Mikr.us – hosting, który rozumie potrzeby amatora-programisty z budżetem
+                    Tu wchodzi na scenę Mikr.us - hosting, który rozumie potrzeby amatora-programisty z budżetem
                     studenckim. VPS? Jest. Linux? Jest. Nginx? Trochę płakałem, ale też jest. Po kilku godzinach
                     googlowania „jak to w ogóle działa” udało się to wszystko odpalić. System działa. Nikt nie zginął.
                 </p>
                 <p class="text-center text-gray-800 md:text-left">
                     <strong>🎉 I tak oto...</strong>
-                    W roku 2025, po 4 latach walki z kodem, kablami, brakiem snu i z samym sobą – narodził się
+                    W roku 2025, po 4 latach walki z kodem, kablami, brakiem snu i z samym sobą - narodził się
                     myWeatherApp. No dobra... Może nie 4 lata, bo tyle to ja się poszczególnych rzeczy uczyłem. Sam
                     projekt powstał z
                     grubsza w 2 miesiące. Może nie zmieni świata, ale za to robi dokładnie to, co obiecuje: pokazuje
@@ -69,11 +69,11 @@ import photo from "@/assets/img/2.jpg";
                     mojej skrzynki z elektroniką. 🚀
                 </p>
 
-                <h3 class="text-2xl font-bold text-center font-Rubik md:text-2xl md:text-left">🧰 Użyte komponenty –
+                <h3 class="text-2xl font-bold text-center font-Rubik md:text-2xl md:text-left">🧰 Użyte komponenty -
                     czyli z czego zbudowałem tego potwora Frankensteina</h3>
 
                 <p class="text-center text-gray-800 md:text-left"><strong>🧠 Klient (czyli moje zmysły):</strong>
-                    Arduino MKR WiFi 1010, nakładka MKR IoT Carrier, czujnik BME280 (Grove – wtyk, nie czary), kod w
+                    Arduino MKR WiFi 1010, nakładka MKR IoT Carrier, czujnik BME280 (Grove - wtyk, nie czary), kod w
                     Arduino C++, zasilanie: bateria 18650 Li-Ion 3.7V + niezawodny powerbank z promocji.</p>
 
                 <p class="text-center text-gray-800 md:text-left"><strong>🗄️ Backend (czyli serce operacji):</strong>
@@ -81,7 +81,7 @@ import photo from "@/assets/img/2.jpg";
                     pogody).</p>
 
                 <p class="text-center text-gray-800 md:text-left"><strong>🖥️ Frontend (czyli co widzą ludzie i nie
-                        uciekają):</strong> VueJS 3, TailwindCSS (1000 klas, żadnych !important), ChartJS – bo wykresy
+                        uciekają):</strong> VueJS 3, TailwindCSS (1000 klas, żadnych !important), ChartJS - bo wykresy
                     są cool.</p>
 
                 <p class="text-center text-gray-800 md:text-left"><strong>📦 Hosting (czyli gdzie to wszystko
