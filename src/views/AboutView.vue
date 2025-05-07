@@ -31,8 +31,7 @@ import photo from "@/assets/img/2.jpg";
                     temperaturę i nie wybucha". Po ogarnięciu, gdzie podłączyć plus, a gdzie minus, przyszła myśl:
                     <i>Ej,
                         fajnie by było wrzucać te dane do internetu, nie?</i> No ale żeby to zrobić, trzeba było czegoś
-                    z Wi-Fi.
-                    Czyli – czas na upgrade sprzętu.
+                    z Wi-Fi. Czyli czas na upgrade sprzętu.
                 </p>
                 <p class="text-center text-gray-800 md:text-left">
                     <strong>📡 Z Arduino do chmur(y).</strong>
@@ -41,17 +40,18 @@ import photo from "@/assets/img/2.jpg";
                     ekscytujące. Postanowiłem zrobić własną apkę. Bo czemu by nie cierpieć bardziej?
                 </p>
                 <p class="text-center text-gray-800 md:text-left">
-                    W ruch poszło Node.js, czyli JavaScript na sterydach. Powstał mój pierwszy backend – REST API, które
+                    W ruch poszło Node.js, czyli JavaScript na sterydach. Powstało moje pierwsze backendowe REST API,
+                    które
                     grzecznie zbierało dane od czujnika i udawało, że wszystko działa bez wyjątku.
                 </p>
                 <p class="text-center text-gray-800 md:text-left">
                     <strong>🖼️ A teraz front, żeby to wyglądało.</strong>
-                    Bo przecież dane są nudne, dopóki nie zobaczysz ich na ładnym wykresie! Wziąłem VueJS 3 – bo wygląda
-                    nowocześnie i nie krzyczy na mnie tak bardzo, jak React. Do stylów dorzuciłem TailwindCSS – czyli
+                    Bo przecież dane są nudne, dopóki nie zobaczysz ich na ładnym wykresie! Wziąłem VueJS 3 - bo wygląda
+                    nowocześnie i nie krzyczy na mnie tak bardzo, jak React. Do stylów dorzuciłem TailwindCSS - czyli
                     framework, który wygląda jak ktoś rzucił Scrabble na klawiaturę <kbd
                         class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">(p-4,
                         text-gray-700, bg-blue-100)</kbd>,
-                    ale działa. Wykresy? ChartJS. Linia rośnie – znaczy ciepło, spada – znaczy zimno. Magia.
+                    ale działa. Wykresy? ChartJS. Linia rośnie - znaczy ciepło, spada - znaczy zimno. Magia.
                 </p>
                 <p class="text-center text-gray-800 md:text-left">
                     <strong>🧠 Ale gdzie to wszystko wrzucić?</strong>
@@ -65,15 +65,14 @@ import photo from "@/assets/img/2.jpg";
                     myWeatherApp. No dobra... Może nie 4 lata, bo tyle to ja się poszczególnych rzeczy uczyłem. Sam
                     projekt powstał z
                     grubsza w 2 miesiące. Może nie zmieni świata, ale za to robi dokładnie to, co obiecuje: pokazuje
-                    pogodę... z
-                    mojej skrzynki z elektroniką. 🚀
+                    pogodę... z mojej skrzynki z elektroniką. 🚀
                 </p>
 
                 <h3 class="text-2xl font-bold text-center font-Rubik md:text-2xl md:text-left">🧰 Użyte komponenty -
                     czyli z czego zbudowałem tego potwora Frankensteina</h3>
 
                 <p class="text-center text-gray-800 md:text-left"><strong>🧠 Klient (czyli moje zmysły):</strong>
-                    Arduino MKR WiFi 1010, nakładka MKR IoT Carrier, czujnik BME280 (Grove - wtyk, nie czary), kod w
+                    Arduino MKR WiFi 1010, nakładka MKR IoT Carrier, czujnik BME280, kod w
                     Arduino C++, zasilanie: bateria 18650 Li-Ion 3.7V + niezawodny powerbank z promocji.</p>
 
                 <p class="text-center text-gray-800 md:text-left"><strong>🗄️ Backend (czyli serce operacji):</strong>
